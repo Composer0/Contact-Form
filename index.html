@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PK0gIY59xJ8Co*+NE6FZ+LOAZKjy+fkDaog==" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="overlay">
+        <form onsubmit="event.preventDefault(); validateForm()">
+            <!-- preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
+            
+            For example, this can be useful when:
+                Clicking on a "Submit" button, prevent it from submitting a form.
+                CLicking on a link, prevent the link from following the URL.
+            Note: Not all events are cancelable. Use the cancelable property to find out if an event is cancelable.
+            Note: The preventDefault() method does not prevent further propogation of an event through thte DOM. Use the stopPropagation() method to handle this.-->
+            <h1>Contact Us</h1>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your name">
+            <small class="error"></small>
+
+            <label for="name">Email:</label>
+            <input type="text" id="email" placeholder="Your email">
+            <small class="error"></small>
+
+            <label for="name">Message:</label>
+            <textarea id="message" placeholder="Your message" rows="6"></textarea>
+            <small class="error"></small>
+
+            <div class="center">
+                <input type="submit" value="Send Message">
+                <p id="success"></p>
+            </div>
+        </form>
+    </div>
+    <script src="script.js" charset="UTF-8"></script>
+</body>
+</html>
