@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="overlay">
-        <form onsubmit="event.preventDefault(); validateForm()">
+        <form action="mail.php" method="post">
             <!-- preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
             
             For example, this can be useful when:
@@ -24,11 +24,11 @@
             <input type="text" id="name" placeholder="Your name">
             <small class="error"></small>
 
-            <label for="name">Email:</label>
+            <label for="email">Email:</label>
             <input type="text" id="email" placeholder="Your email">
             <small class="error"></small>
 
-            <label for="name">Message:</label>
+            <label for="text">Message:</label>
             <textarea id="message" placeholder="Your message" rows="6"></textarea>
             <small class="error"></small>
 
